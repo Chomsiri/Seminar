@@ -94,5 +94,21 @@ chile_mc_simulation <- mcSimulation(estimate = as.estimate(input_estimates),
 
 chile_mc_simulation
 
+#plot distribution####
+
+plot_distributions(mcSimulation_object = chile_mc_simulation,
+                   vars = "final_result",
+                   method = "boxplot_density",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+
+plot_distributions(mcSimulation_object = chile_mc_simulation,
+                   vars = "final_result",
+                   method = "hist_simple_overlay",
+                   old_names = "final_result",
+                   new_names = "Outcome distribution for profits")
+
+
+
 
 
