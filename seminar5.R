@@ -278,7 +278,7 @@ ggplot(data = mpg,
 # ggplot not slow example ####
 
 
-Change the title and labels as you see fit
+#Change the title and labels as you see fit
 
 ggplot(mtcars, 
        aes(mpg, 
