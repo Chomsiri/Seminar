@@ -6,6 +6,7 @@ library(decisionSupport)
 install.packages("DiagrammeR")
 library(DiagrammeR)
 
+
 example_decision_model <- function(x, varnames)
 {
   profit <- benefits-costs
