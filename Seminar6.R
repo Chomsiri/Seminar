@@ -46,33 +46,23 @@ mermaid("graph TB
 
 #Estimation ####
 
-input_estimates <- data.frame(variable = c("Yield", "Market_price", "Labor_cost"),
-                              lower = c(6000, 3, 500),
+Management_cost <- data.frame(variable = c("Yield", "Market_price", "Labor_cost", "Managment_cost"),
+                              lower = c(6000, 3, 500, 100),
                               median = NA,
-                              upper = c(14000, 8, 1000),
+                              upper = c(14000, 8, 1000, 2000),
                               distribution = c("posnorm", "posnorm", "posnorm"),
-                              label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)"),
+                              label = c("Yield (kg/ha)", "Price (USD/kg)", "Labor cost (USD/ha)", "Management cost (USD/ha)"),
                               Description = c("Yield in a sweet cherry farm under normal conditions",
                                               "Price of sweet cherry in a normal season",
-                                              "Labor costs in a normal season"))
-
-input_estimates
-
-#Change Management_cost
-
-Management_cost <- data.frame(variable = c("Yield", "Market_price", "Labor_cost"),
-                              lower = c(6000, 3, 100),
-                              median = NA,
-                              upper = c(14000, 8, 2000),
-                              distribution = c("posnorm", "posnorm", "posnorm"),
-                              label = c("Yield (kg/ha)", "Price (USD/kg)", "Management cost (USD/ha)"),
-                              Description = c("Yield in a sweet cherry farm under normal conditions",
-                                              "Price of sweet cherry in a normal season",
+                                              "Labor costs in a normal season",
                                               "Management costs in a normal season"))
 
 Management_cost
 
+
+
 # mcSimulation ####
+
 
 
 
@@ -128,4 +118,6 @@ make_variables(as.estimate(input_estimates))
 
 Management_cost
 
-Labor_cost + Management_cost
+Labor_cost + Market_price
+
+
