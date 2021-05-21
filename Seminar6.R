@@ -120,5 +120,4 @@ Management_cost
 
 Labor_cost + Market_price
  
-# Test ####
 
